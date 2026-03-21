@@ -187,8 +187,9 @@ body {
                 width: 100%;
                 max-width: 300px;        /* Limita a largura total */
                 margin: 0.5rem auto 0;     /* Centraliza horizontalmente */
-                gap: 1rem;
-                margin-bottom: 25px;
+                gap: 15px;
+                margin-bottom: 5px;
+                margin-top: 20px;
             }
 
             /* Ajuste individual dos botões para remover margens residuais */
@@ -214,7 +215,7 @@ body {
             }
 
             .hero {
-                padding-bottom: 40px; /* Garante um espaço interno no fundo do Hero */
+                padding-bottom: 20px; /* Garante um espaço interno no fundo do Hero */
             }
 
             /* Centraliza todo o bloco de conteúdo do Hero */
