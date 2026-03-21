@@ -126,6 +126,109 @@ body {
     line-height: 1.2;
 }
 
+/* --- Estilo Base dos Botões (Desktop e Geral) --- */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se o espaço acabar */
+    gap: 1.5rem;    /* Espaço uniforme entre os botões */
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    cursor: pointer;
+    min-width: 180px; /* Garante que os botões tenham tamanho similar */
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #60a5fa, #3b82f6);
+    color: white;
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(96, 165, 250, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #60a5fa;
+    border: 2px solid #60a5fa;
+}
+
+.btn-secondary:hover {
+    background: rgba(96, 165, 250, 0.1);
+    transform: translateY(-3px);
+}
+
+/* --- Ajuste Específico para Mobile (Até 768px) --- */
+@media (max-width: 768px) {
+            #sobre .section-title {
+                font-size: 3rem;
+                letter-spacing: -1px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;     /* ✅ MUDANÇA: centraliza ao invés de flex-start */
+                justify-content: center;
+                width: 100%;
+                max-width: 300px;        /* Limita a largura total */
+                margin: 0.5rem auto 0;     /* Centraliza horizontalmente */
+                gap: 1rem;
+                margin-bottom: 25px;
+            }
+
+            /* Ajuste individual dos botões para remover margens residuais */
+            .hero-buttons .btn {
+                width: 100%;             /* Ocupa toda largura do container pai */
+                max-width: 280px;        /* Limite máximo */
+                margin: 0 !important;    /* Remove TODAS as margens */
+                display: block;
+                text-align: center;
+                padding: 1rem 2rem;      /* Padding confortável */
+            }
+            
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%;
+            }
+
+            .btn {
+                margin-right: 0;        /* Remove a margem lateral que empurra o botão no mobile */
+                width: 80%;             /* Define uma largura padrão para ambos ficarem iguais */
+                text-align: center;
+            }
+
+            .hero {
+                padding-bottom: 40px; /* Garante um espaço interno no fundo do Hero */
+            }
+
+            /* Centraliza todo o bloco de conteúdo do Hero */
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;     /* Centraliza horizontalmente */
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+                padding: 0 1rem;         /* Padding lateral para não encostar nas bordas */
+            }
+        }
+
 /* --- Novas regras para a foto no Hero --- */
 
 /* Cria o container flexível para texto e imagem */
@@ -235,49 +338,6 @@ body {
     background-clip: text;
 }
 
-.hero-description {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin-bottom: 2.5rem;
-    max-width: 500px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btn-primary {
-    background: linear-gradient(45deg, #60a5fa, #3b82f6);
-    color: white;
-    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(96, 165, 250, 0.4);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #60a5fa;
-    border-color: #60a5fa;
-}
-
-.btn-secondary:hover {
-    background: #60a5fa;
-    color: white;
-    transform: translateY(-3px);
-}
-
 /* Sections */
 section {
     padding: 60x 0;
@@ -361,46 +421,6 @@ section {
     #sobre .section-title {
         font-size: 3rem;
         letter-spacing: -1px;
-    }
-
-    .hero-buttons {
-        display: block;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        width: 100%;
-        margin-top: 2rem;
-        gap: 1rem;
-    }
-
-    /* Ajuste individual dos botões para remover margens residuais */
-    .hero-buttons .btn {
-        margin-right: 0 !important; /* Remove qualquer margem da direita */
-        margin-left: 0 !important;  /* Remove qualquer margem da esquerda */
-        width: 100%;                /* Ocupa a largura disponível (dentro do padding) */
-        max-width: 300px;           /* Limita para não ficar largo demais em tablets */
-        display: block;             /* Garante comportamento de bloco para centralizar */
-    }
-            
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-     }
-
-    .btn {
-        margin-right: 0;        /* Remove a margem lateral que empurra o botão no mobile */
-        width: 80%;             /* Define uma largura padrão para ambos ficarem iguais */
-        text-align: center;
-    }
-
-    /* Centraliza todo o bloco de conteúdo do Hero */
-    .hero-content {
-        text-align: center; /* Centraliza o título e a descrição */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centraliza os itens internamente */
-        width: 100%;
-        justify-content: center;
     }
 }
 
