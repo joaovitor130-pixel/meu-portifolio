@@ -262,6 +262,20 @@ body {
                 padding: 0.6rem 1.2rem;
                 white-space: nowrap; /* Impede que o texto quebre linha dentro da tag */
             }
+
+            .hero-title {
+                font-size: 2.2rem; /* Tamanho mais harmônico para celular */
+                line-height: 1.1;  /* Deixa as linhas mais próximas e modernas */
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 10px;    /* Evita que o texto encoste nas bordas */
+            }
+
+            .hero-title br {
+                display: block; /* Garante que a quebra de linha funcione */
+                content: "";
+                margin-top: 5px;
+            }
         }
 
 /* --- Novas regras para a foto no Hero --- */
