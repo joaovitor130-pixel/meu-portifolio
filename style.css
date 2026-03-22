@@ -233,15 +233,27 @@ body {
                 padding: 0 5%; /* Cria um respiro nas laterais para o texto não encostar no vidro do celular */
             }
             
+            /* Força o container e o texto a ficarem à esquerda */
+            .sobre-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important; /* Alinha o bloco todo à esquerda */
+                text-align: left !important;        /* Alinha as linhas de texto */
+                padding: 0 20px;                    /* Margem de segurança nas bordas */
+            }
+
             .sobre-text p {
-                text-align: left;
+                text-align: left !important;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
                 margin-bottom: 20px; /* Espaço saudável entre um parágrafo e outro */
             }
 
             .skills-grid {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-start; /* Mantém o alinhamento à esquerda */
+                justify-content: flex-start !important; /* Mantém o alinhamento à esquerda */
                 gap: 0.8rem;
             }
 
