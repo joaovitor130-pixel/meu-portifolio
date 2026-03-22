@@ -276,6 +276,31 @@ body {
                 content: "";
                 margin-top: 5px;
             }
+
+            /* Centraliza o título "Minha Stack & Conhecimentos" */
+            .skills h3 {
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Garante que o container das tags ocupe a largura total e centralize o conteúdo */
+            .skills-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center !important; /* Força a centralização das tags */
+                gap: 0.8rem;
+                padding: 0;
+            }
+
+            /* Ajuste no container pai das skills para garantir que não herde alinhamento à esquerda */
+            .skills {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                text-align: center;
+                width: 100%;
+                padding: 1.5rem; /* Ajuste leve no respiro interno para mobile */
+            }
         }
 
 /* --- Novas regras para a foto no Hero --- */
